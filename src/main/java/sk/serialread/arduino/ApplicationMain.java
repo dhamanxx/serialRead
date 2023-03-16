@@ -67,6 +67,7 @@ public class ApplicationMain extends JDialog implements ItemListener, ActionList
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         errorLog = new JTextArea(10, 30);
+        service.setErrorLog(errorLog);
         JScrollPane sp = new JScrollPane(errorLog);
 
         availablePorts = SerialPort.getCommPorts();
