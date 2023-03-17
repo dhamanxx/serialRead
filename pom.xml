@@ -15,10 +15,17 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.fazecast</groupId>
-            <artifactId>jSerialComm</artifactId>
-            <version>2.9.3</version>
+            <groupId>io.github.java-native</groupId>
+            <artifactId>jssc</artifactId>
+            <version>2.9.4</version>
         </dependency>
+        <!--
+                <dependency>
+                    <groupId>com.fazecast</groupId>
+                    <artifactId>jSerialComm</artifactId>
+                    <version>2.9.3</version>
+                </dependency>
+        -->
     </dependencies>
 
     <build>
@@ -70,7 +77,7 @@
                             <headerType>gui</headerType>
                             <jar>${project.build.directory}/${artifactId}-${version}-shaded.jar
                             </jar>
-                            <outfile>${project.build.directory}/serialread.exe</outfile>
+                            <outfile>${project.build.directory}/serialread-v2.exe</outfile>
                             <downloadUrl>http://java.com/download</downloadUrl>
                             <classPath>
                                 <mainClass>sk.serialread.arduino.ApplicationMain</mainClass>
@@ -91,7 +98,7 @@
                                 <productName>${project.name}</productName>
                                 <companyName>serialread.sk</companyName>
                                 <internalName>serialread</internalName>
-                                <originalFilename>serialread.exe</originalFilename>
+                                <originalFilename>serialread-v2.exe</originalFilename>
                             </versionInfo>
                         </configuration>
                     </execution>
