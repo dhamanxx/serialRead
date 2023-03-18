@@ -77,7 +77,7 @@
                             <headerType>gui</headerType>
                             <jar>${project.build.directory}/${artifactId}-${version}-shaded.jar
                             </jar>
-                            <outfile>${project.build.directory}/serialread-v2.exe</outfile>
+                            <outfile>${project.build.directory}/serialread-v3.exe</outfile>
                             <downloadUrl>http://java.com/download</downloadUrl>
                             <classPath>
                                 <mainClass>sk.serialread.arduino.ApplicationMain</mainClass>
@@ -98,7 +98,7 @@
                                 <productName>${project.name}</productName>
                                 <companyName>serialread.sk</companyName>
                                 <internalName>serialread</internalName>
-                                <originalFilename>serialread-v2.exe</originalFilename>
+                                <originalFilename>serialread-v3.exe</originalFilename>
                             </versionInfo>
                         </configuration>
                     </execution>

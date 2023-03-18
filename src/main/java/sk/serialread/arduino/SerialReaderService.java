@@ -70,11 +70,39 @@ public class SerialReaderService implements SerialPortEventListener {
                 for (byte b : buffer) {
                     if ((b == '\r' || b == '\n') && message.length() > 0) {
                         String inputLine = message.toString();
-                        System.out.println(inputLine);
+//                        System.out.println(inputLine);
                         String[] split = inputLine.split(",");
                         if (split.length == 2) {
-                            lblL.setText("L  " + (split[0].length() > 8 ? split[0].substring(0, 8) : split[0]));
-                            lblP.setText("P  " + (split[1].length() > 8 ? split[1].substring(0, 8) : split[1]));
+                            String[] splitL = split[0].split(":");
+                            String[] splitP = split[1].split(":");
+                            if (splitL.length == 3) {
+                                String mmL = splitL[1];
+                                if (mmL.length() == 1) {
+                                    mmL = "0" + mmL;
+                                }
+                                String msL = splitL[2];
+                                if (msL.length() == 1) {
+                                    msL = "00" + msL;
+                                }
+                                if (msL.length() == 2) {
+                                    msL = "0" + msL;
+                                }
+                                lblL.setText("L  " + splitL[0] + ":" + mmL + ":" + msL);
+                            }
+                            if (splitP.length == 3) {
+                                String mmP = splitL[1];
+                                if (mmP.length() == 1) {
+                                    mmP = "0" + mmP;
+                                }
+                                String msP = splitL[2];
+                                if (msP.length() == 1) {
+                                    msP = "00" + msP;
+                                }
+                                if (msP.length() == 2) {
+                                    msP = "0" + msP;
+                                }
+                                lblP.setText("P  " + splitP[0] + ":" + mmP + ":" + msP);
+                            }
                             window.revalidate();
                             window.repaint();
                         }
