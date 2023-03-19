@@ -87,21 +87,21 @@ public class SerialReaderService implements SerialPortEventListener {
                                 if (msL.length() == 2) {
                                     msL = "0" + msL;
                                 }
-                                lblL.setText("L  " + splitL[0] + ":" + mmL + ":" + msL);
+                                lblL.setText("L  " + splitL[0] + ":" + mmL + ":" + msL.substring(0,2));
                             }
                             if (splitP.length == 3) {
-                                String mmP = splitL[1];
+                                String mmP = splitP[1];
                                 if (mmP.length() == 1) {
                                     mmP = "0" + mmP;
                                 }
-                                String msP = splitL[2];
+                                String msP = splitP[2];
                                 if (msP.length() == 1) {
                                     msP = "00" + msP;
                                 }
                                 if (msP.length() == 2) {
                                     msP = "0" + msP;
                                 }
-                                lblP.setText("P  " + splitP[0] + ":" + mmP + ":" + msP);
+                                lblP.setText("P  " + splitP[0] + ":" + mmP + ":" + msP.substring(0,2));
                             }
                             window.revalidate();
                             window.repaint();

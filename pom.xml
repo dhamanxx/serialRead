@@ -11,6 +11,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <org.lombok.version>1.18.12</org.lombok.version>
+        <app.version>v4</app.version>
     </properties>
 
     <dependencies>
@@ -77,7 +78,7 @@
                             <headerType>gui</headerType>
                             <jar>${project.build.directory}/${artifactId}-${version}-shaded.jar
                             </jar>
-                            <outfile>${project.build.directory}/serialread-v3.exe</outfile>
+                            <outfile>${project.build.directory}/serialread-${app.version}.exe</outfile>
                             <downloadUrl>http://java.com/download</downloadUrl>
                             <classPath>
                                 <mainClass>sk.serialread.arduino.ApplicationMain</mainClass>
@@ -98,7 +99,7 @@
                                 <productName>${project.name}</productName>
                                 <companyName>serialread.sk</companyName>
                                 <internalName>serialread</internalName>
-                                <originalFilename>serialread-v3.exe</originalFilename>
+                                <originalFilename>serialread-${app.version}.exe</originalFilename>
                             </versionInfo>
                         </configuration>
                     </execution>

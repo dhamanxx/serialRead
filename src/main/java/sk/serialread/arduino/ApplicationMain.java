@@ -101,13 +101,13 @@ public class ApplicationMain extends JDialog implements ItemListener, ActionList
         this.baudRate.setPreferredSize(new Dimension(100, 25));
         this.baudRate.setSelectedItem(9600);
 
-        lblL = new JLabel("L  0:00:000", SwingConstants.CENTER);
+        lblL = new JLabel("L  0:00:00", SwingConstants.CENTER);
         lblL.setFont(new Font("DSEG7 Modern", Font.PLAIN, 100));
         service.setLblL(lblL);
         JButton btn1 = new JButton("Copy L to clipboard");
         btn1.addActionListener(this);
 
-        lblP = new JLabel("P  0:00:000", SwingConstants.CENTER);
+        lblP = new JLabel("P  0:00:00", SwingConstants.CENTER);
         lblP.setFont(new Font("DSEG7 Modern", Font.PLAIN, 100));
         service.setLblP(lblP);
         JButton btn2 = new JButton("Copy P to clipboard");
